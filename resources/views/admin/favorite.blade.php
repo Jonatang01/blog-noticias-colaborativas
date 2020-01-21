@@ -16,7 +16,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            ALL FAVORITE POSTS
+                            Todos los Posts Favoritos
                             <span class="badge bg-blue">{{ $posts->count() }}</span>
                         </h2>
                     </div>
@@ -26,23 +26,23 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
+                                    <th>Titulo</th>
+                                    <th>Autor</th>
                                     <th><i class="material-icons">favorite</i></th>
                                     {{--<th><i class="material-icons">comment</i><</th>--}}
                                     <th><i class="material-icons">visibility</i></th>
-                                    <th>Action</th>
+                                    <th>Accion</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
+                                    <th>Titulo</th>
+                                    <th>Autor</th>
                                     <th><i class="material-icons">favorite</i></th>
                                     {{--<th><i class="material-icons">comment</i><</th>--}}
                                     <th><i class="material-icons">visibility</i></th>
-                                    <th>Action</th>
+                                    <th>Accion</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -96,14 +96,14 @@
     <script type="text/javascript">
         function removePost(id) {
             swal({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: 'Estas Seguro?',
+                text: "No podras revertir esto!",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, ELiminado!',
+                cancelButtonText: 'No, cancelar!',
                 confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger',
                 buttonsStyling: false,

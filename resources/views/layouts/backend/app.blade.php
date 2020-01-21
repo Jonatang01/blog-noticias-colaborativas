@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <p>Please wait...</p>
+        <p>Espere...</p>
     </div>
 </div>
 <!-- #END# Page Loader -->
@@ -65,7 +65,7 @@
         </div>
         <input type="text" name="query" placeholder="START TYPING...">
         <div class="close-search">
-            <i class="material-icons">close</i>
+            <i class="material-icons">Cerrar</i>
         </div>
     </form>
 </div>

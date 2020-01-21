@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            SETTINGS
+                            Configuracion
                         </h2>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
@@ -33,12 +33,12 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active">
                                 <a href="#profile_with_icon_title" data-toggle="tab">
-                                    <i class="material-icons">face</i> UPDATE PROFILE
+                                    <i class="material-icons">face</i> Actualizar Perfil
                                 </a>
                             </li>
                             <li role="presentation">
                                 <a href="#change_password_with_icon_title" data-toggle="tab">
-                                    <i class="material-icons">change_history</i> CHANGE PASSWORD
+                                    <i class="material-icons">change_history</i>Cambiar PASSWORD
                                 </a>
                             </li>
 
@@ -52,7 +52,7 @@
                                     @method('PUT')
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="name">Name : </label>
+                                            <label for="name">Nomnre : </label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
@@ -64,7 +64,7 @@
                                     </div>
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="email_address_2">Email Address</label>
+                                            <label for="email_address_2">Email</label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
@@ -76,7 +76,7 @@
                                     </div>
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="email_address_2">Profile Image : </label>
+                                            <label for="email_address_2">Imagen de Perfil : </label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="email_address_2">About : </label>
+                                            <label for="email_address_2">Sobre mi.. : </label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
@@ -102,7 +102,7 @@
 
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">UPDATE</button>
+                                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">Actualizar</button>
                                         </div>
                                     </div>
                                 </form>
@@ -113,7 +113,7 @@
                                     @method('PUT')
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="old_password">Old Password : </label>
+                                            <label for="old_password">Contraseña Actual: </label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
@@ -126,7 +126,7 @@
 
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="password">New Password : </label>
+                                            <label for="password">Nueva Contraseña : </label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
@@ -139,7 +139,7 @@
 
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                            <label for="confirm_password">Confirm Password : </label>
+                                            <label for="confirm_password">Confirmar Password : </label>
                                         </div>
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
@@ -154,7 +154,7 @@
 
                                     <div class="row clearfix">
                                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">UPDATE</button>
+                                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">Actualizar</button>
                                         </div>
                                     </div>
                                 </form>

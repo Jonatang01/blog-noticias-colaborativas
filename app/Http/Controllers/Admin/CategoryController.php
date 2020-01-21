@@ -59,7 +59,7 @@ class CategoryController extends Controller
                 Storage::disk('public')->makeDirectory('category');
             }
 //            resize image for category and upload
-            $category = Image::make($image)->resize(1600,479)->save();
+            $category = Image::make($image)->resize(1600,479)->stream();
             Storage::disk('public')->put('category/'.$imagename,$category);
 
             //            check category slider dir is exists
@@ -68,7 +68,7 @@ class CategoryController extends Controller
                 Storage::disk('public')->makeDirectory('category/slider');
             }
             //            resize image for category slider and upload
-            $slider = Image::make($image)->resize(500,333)->save();
+            $slider = Image::make($image)->resize(500,333)->stream();
             Storage::disk('public')->put('category/slider/'.$imagename,$slider);
 
         } else {
@@ -141,7 +141,7 @@ class CategoryController extends Controller
                 Storage::disk('public')->delete('category/'.$category->image);
             }
 //            resize image for category and upload
-            $categoryimage = Image::make($image)->resize(1600,479)->save();
+            $categoryimage = Image::make($image)->resize(1600,479)->stream();
             Storage::disk('public')->put('category/'.$imagename,$categoryimage);
 
             //            check category slider dir is exists
@@ -155,7 +155,7 @@ class CategoryController extends Controller
                 Storage::disk('public')->delete('category/slider/'.$category->image);
             }
             //            resize image for category slider and upload
-            $slider = Image::make($image)->resize(500,333)->save();
+            $slider = Image::make($image)->resize(500,333)->stream();
             Storage::disk('public')->put('category/slider/'.$imagename,$slider);
 
         } else {

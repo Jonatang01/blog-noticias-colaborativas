@@ -16,7 +16,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            ALL COMMENTS
+                            TODOS LOS COMENTARIOS
                             <span class="badge bg-blue">{{ $comments->count() }}</span>
                         </h2>
                     </div>
@@ -25,16 +25,16 @@
                             <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                 <thead>
                                 <tr>
-                                    <th class="text-center">Comments Info</th>
-                                    <th class="text-center">Post Info</th>
-                                    <th class="text-center">Action</th>
+                                    <th class="text-center">Comentario</th>
+                                    <th class="text-center">Post </th>
+                                    <th class="text-center">Accion</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th class="text-center">Comments Info</th>
-                                    <th class="text-center">Post Info</th>
-                                    <th class="text-center">Action</th>
+                                    <th class="text-center">Comentario</th>
+                                    <th class="text-center">Post</th>
+                                    <th class="text-center">Accion</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -51,7 +51,7 @@
                                                         <h4 class="media-heading">{{ $comment->user->name }} <small>{{ $comment->created_at->diffForHumans() }}</small>
                                                         </h4>
                                                         <p>{{ $comment->comment }}</p>
-                                                        <a target="_blank" href="{{ route('post.details',$comment->post->slug.'#comments') }}">Reply</a>
+                                                        <a target="_blank" href="{{ route('post.details',$comment->post->slug.'#comments') }}">Responder</a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -109,8 +109,8 @@
     <script type="text/javascript">
         function deleteComment(id) {
             swal({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: 'Estas Seguro?',
+                text: "No podras revertir esto!",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',

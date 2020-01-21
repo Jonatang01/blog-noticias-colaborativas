@@ -93,11 +93,11 @@
                     <div class="single-post info-area ">
 
                         <div class="about-area">
-                            <h4 class="title"><b>ABOUT AUTHOR</b></h4>
+                            <h4 class="title"><b>Sobre el Autor</b></h4>
                             <p>{{ $author->name }}</p><br>
                             <p>{{ $author->about }}</p><br>
-                            <strong>Author Since: {{ $author->created_at->toDateString() }}</strong><br>
-                            <strong>Total Posts : {{ $author->posts->count() }}</strong>
+                            <strong>Autor desde: {{ $author->created_at->toDateString() }}</strong><br>
+                            <strong>Total de posts : {{ $author->posts->count() }}</strong>
                         </div>
 
 

@@ -70,7 +70,7 @@ class PostController extends Controller
                 Storage::disk('public')->makeDirectory('post');
             }
 
-            $postImage = Image::make($image)->resize(1600,1066)->save();
+            $postImage = Image::make($image)->resize(1600,1066)->stream();
             Storage::disk('public')->put('post/'.$imageName,$postImage);
 
         } else {
@@ -162,7 +162,7 @@ class PostController extends Controller
             {
                 Storage::disk('public')->delete('post/'.$post->image);
             }
-            $postImage = Image::make($image)->resize(1600,1066)->save();
+            $postImage = Image::make($image)->resize(1600,1066)->stream();
             Storage::disk('public')->put('post/'.$imageName,$postImage);
 
         } else {
@@ -203,14 +203,14 @@ class PostController extends Controller
         {
             $post->is_approved = true;
             $post->save();
-            $post->user->notify(new AuthorPostApproved($post));
+            //$post->user->notify(new AuthorPostApproved($post));
 
-            $subscribers = Subscriber::all();
-            foreach ($subscribers as $subscriber)
-            {
-                Notification::route('mail',$subscriber->email)
-                    ->notify(new NewPostNotify($post));
-            }
+            //$subscribers = Subscriber::all();
+            //foreach ($subscribers as $subscriber)
+            //{
+               // Notification::route('mail',$subscriber->email)
+                 //   ->notify(new NewPostNotify($post));
+            //}
 
             Toastr::success('Post Successfully Approved :)','Success');
         } else {

@@ -16,7 +16,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            ALL FAVORITE POSTS
+                            Posts Favoritos
                             <span class="badge bg-blue">{{ $posts->count() }}</span>
                         </h2>
                     </div>
@@ -26,22 +26,22 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
+                                    <th>Titulo</th>
+                                    <th>Autor</th>
                                     <th><i class="material-icons">favorite</i></th>
                                     {{--<th><i class="material-icons">comment</i><</th>--}}
-                                    <th><i class="material-icons">visibility</i></th>
+                                    <th><i class="material-icons">visibilidad</i></th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
-                                    <th><i class="material-icons">favorite</i></th>
+                                    <th>Titulo</th>
+                                    <th>Autor</th>
+                                    <th><i class="material-icons">favorito</i></th>
                                     {{--<th><i class="material-icons">comment</i><</th>--}}
-                                    <th><i class="material-icons">visibility</i></th>
+                                    <th><i class="material-icons">visibilidad</i></th>
                                     <th>Action</th>
                                 </tr>
                                 </tfoot>
@@ -56,11 +56,11 @@
                                             <td class="text-center">
 
                                                 <a href="{{ route('admin.post.show',$post->id) }}" class="btn btn-info waves-effect">
-                                                    <i class="material-icons">visibility</i>
+                                                    <i class="material-icons">visibilidad</i>
                                                 </a>
 
                                                 <button class="btn btn-danger waves-effect" type="button" onclick="removePost({{ $post->id }})">
-                                                    <i class="material-icons">delete</i>
+                                                    <i class="material-icons">Eliminar</i>
                                                 </button>
                                                 <form id="remove-form-{{ $post->id }}" action="{{ route('post.favorite',$post->id) }}" method="POST" style="display: none;">
                                                     @csrf

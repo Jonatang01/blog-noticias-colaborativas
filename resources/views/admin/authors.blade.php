@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            ALL AUTHORS
+                            Todos Los Autores
                             <span class="badge bg-blue">{{ $authors->count() }}</span>
                         </h2>
                     </div>
@@ -25,23 +25,23 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Name</th>
+                                    <th>Nombre</th>
                                     <th>Posts</th>
-                                    <th>Comments</th>
-                                    <th>Favorite Posts</th>
-                                    <th>Created At</th>
-                                    <th>Action</th>
+                                    <th>Comentarios</th>
+                                    <th>Post Favoritos</th>
+                                    <th>Fecha de Creacion</th>
+                                    <th>Accion</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Name</th>
+                                    <th>Nombre</th>
                                     <th>Posts</th>
-                                    <th>Comments</th>
-                                    <th>Favorite Posts</th>
-                                    <th>Created At</th>
-                                    <th>Action</th>
+                                    <th>Comentarios</th>
+                                    <th>Posts Favoritos</th>
+                                    <th>Fecha de Creacion</th>
+                                    <th>Accion</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -52,7 +52,7 @@
                                             <td>{{ $author->posts_count }}</td>
                                             <td>{{ $author->comments_count }}</td>
                                             <td>{{ $author->favorite_posts_count }}</td>
-                                            <td>{{ $author->created_at->toDateString() }}</td>
+                                            <td>{{ $author->created_at }}</td>
                                             <td class="text-center">
                                                 <button class="btn btn-danger waves-effect" type="button" onclick="deleteAuthors({{ $author->id }})">
                                                     <i class="material-icons">delete</i>

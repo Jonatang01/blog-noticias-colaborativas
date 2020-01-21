@@ -17,25 +17,25 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                               ADD NEW POST
+                               Nuevo Post
                             </h2>
                         </div>
                         <div class="body">
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="title" class="form-control" name="title">
-                                        <label class="form-label">Post Title</label>
+                                        <label class="form-label">titulo post</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="image">Featured Image</label>
+                                    <label for="image">Imagen Destacada</label>
                                     <input type="file" name="image">
                                 </div>
 
                             <div class="form-group">
                                 <input type="checkbox" id="publish" class="filled-in" name="status" value="1">
-                                <label for="publish">Publish</label>
+                                <label for="publish">Publicar</label>
                             </div>
 
                         </div>
@@ -45,13 +45,13 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Categories and Tags
+                                Categorias & Tags
                             </h2>
                         </div>
                         <div class="body">
                             <div class="form-group form-float">
                                 <div class="form-line {{ $errors->has('categories') ? 'focused error' : '' }}">
-                                    <label for="category">Select Category</label>
+                                    <label for="category">Selecccionar Categoria</label>
                                     <select name="categories[]" id="category" class="form-control show-tick" data-live-search="true" multiple>
                                         @foreach($categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -62,7 +62,7 @@
 
                             <div class="form-group form-float">
                                 <div class="form-line {{ $errors->has('tags') ? 'focused error' : '' }}">
-                                    <label for="tag">Select Tags</label>
+                                    <label for="tag">Seleccionar Tags</label>
                                     <select name="tags[]" id="tag" class="form-control show-tick" data-live-search="true" multiple>
                                         @foreach($tags as $tag)
                                             <option value="{{ $tag->id }}">{{ $tag->name }}</option>
@@ -71,8 +71,8 @@
                                 </div>
                             </div>
 
-                            <a  class="btn btn-danger m-t-15 waves-effect" href="{{ route('author.post.index') }}">BACK</a>
-                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">SUBMIT</button>
+                            <a  class="btn btn-danger m-t-15 waves-effect" href="{{ route('author.post.index') }}">Regresar</a>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">Enviar</button>
 
                         </div>
                     </div>

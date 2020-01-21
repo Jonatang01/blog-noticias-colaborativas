@@ -60,7 +60,7 @@ class PostController extends Controller
         $slug = str_slug($request->title);
         if(isset($image))
         {
-//            make unipue name for image
+//           Nombre para imagen
             $currentDate = Carbon::now()->toDateString();
             $imageName  = $slug.'-'.$currentDate.'-'.uniqid().'.'.$image->getClientOriginalExtension();
 
@@ -69,7 +69,7 @@ class PostController extends Controller
                 Storage::disk('public')->makeDirectory('post');
             }
 
-            $postImage = Image::make($image)->resize(1600,1066)->save();
+            $postImage = Image::make($image)->resize(1600,1066)->stream();
             Storage::disk('public')->put('post/'.$imageName,$postImage);
 
         } else {
@@ -94,8 +94,8 @@ class PostController extends Controller
         $post->tags()->attach($request->tags);
 
         $users = User::where('role_id','1')->get();
-        Notification::send($users, new NewAuthorPost($post));
-        Toastr::success('Post Successfully Saved :)','Success');
+        //Notification::send($users, new NewAuthorPost($post));
+        Toastr::success('Post guardado con exito :)','Guardado');
         return redirect()->route('author.post.index');
     }
 
@@ -171,7 +171,7 @@ class PostController extends Controller
             {
                 Storage::disk('public')->delete('post/'.$post->image);
             }
-            $postImage = Image::make($image)->resize(1600,1066)->save();
+            $postImage = Image::make($image)->resize(1600,1066)->stream();
             Storage::disk('public')->put('post/'.$imageName,$postImage);
 
         } else {

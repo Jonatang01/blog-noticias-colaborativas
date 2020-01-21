@@ -16,7 +16,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            ALL COMMENTS
+                            Todos los Comentarios
                         </h2>
                     </div>
                     <div class="body">
@@ -24,16 +24,16 @@
                             <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                 <thead>
                                 <tr>
-                                    <th class="text-center">Comments Info</th>
+                                    <th class="text-center">Comentario Info</th>
                                     <th class="text-center">Post Info</th>
-                                    <th class="text-center">Action</th>
+                                    <th class="text-center">Accion</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th class="text-center">Comments Info</th>
+                                    <th class="text-center">Comentario Info</th>
                                     <th class="text-center">Post Info</th>
-                                    <th class="text-center">Action</th>
+                                    <th class="text-center">Accion</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -51,7 +51,7 @@
                                                         <h4 class="media-heading">{{ $comment->user->name }} <small>{{ $comment->created_at->diffForHumans() }}</small>
                                                         </h4>
                                                         <p>{{ $comment->comment }}</p>
-                                                        <a target="_blank" href="{{ route('post.details',$comment->post->slug.'#comments') }}">Reply</a>
+                                                        <a target="_blank" href="{{ route('post.details',$comment->post->slug.'#comments') }}">Respuesta</a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -72,7 +72,7 @@
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-danger waves-effect" onclick="deleteComment({{ $comment->id }})">
-                                                    <i class="material-icons">delete</i>
+                                                    <i class="material-icons">Eliminar</i>
                                                 </button>
                                                 <form id="delete-form-{{ $comment->id }}" method="POST" action="{{ route('author.comment.destroy',$comment->id) }}" style="display: none;">
                                                     @csrf

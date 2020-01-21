@@ -31,7 +31,7 @@
                         <i class="material-icons">favorite</i>
                     </div>
                     <div class="content">
-                        <div class="text">TOTAL FAVORITE</div>
+                        <div class="text">TOTAL FAVORITOS</div>
                         <div class="number count-to" data-from="0" data-to="{{ Auth::user() ->favorite_posts()->count() }}" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <i class="material-icons">library_books</i>
                     </div>
                     <div class="content">
-                        <div class="text">PENDING POSTS</div>
+                        <div class="text">POST PENDIENTES</div>
                         <div class="number count-to" data-from="0" data-to="{{ $total_pending_posts }}" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <i class="material-icons">person_add</i>
                     </div>
                     <div class="content">
-                        <div class="text">TOTAL VIEWS</div>
+                        <div class="text">VISTAS TOTALES</div>
                         <div class="number count-to" data-from="0" data-to="{{ $all_views }}" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <i class="material-icons">apps</i>
                     </div>
                     <div class="content">
-                        <div class="text">CATEGORIES</div>
+                        <div class="text">CATEGORIAS</div>
                         <div class="number count-to" data-from="0" data-to="{{ $category_count }}" data-speed="15" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                         <i class="material-icons">account_circle</i>
                     </div>
                     <div class="content">
-                        <div class="text">TOTAL AUTHOR</div>
+                        <div class="text">TOTAL DE AUTORES</div>
                         <div class="number count-to" data-from="0" data-to="{{ $author_count }}" data-speed="15" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -103,21 +103,21 @@
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
                 <div class="card">
                     <div class="header">
-                        <h2>MOST POPULAR POST</h2>
+                        <h2>POSTS MAS POPULAR</h2>
                     </div>
                     <div class="body">
                         <div class="table-responsive">
                             <table class="table table-hover dashboard-task-infos">
                                 <thead>
                                     <tr>
-                                        <th>Rank</th>
-                                        <th>Title</th>
-                                        <th>Author</th>
-                                        <th>Views</th>
-                                        <th>Favorite</th>
-                                        <th>Comments</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                        <th>Ranking</th>
+                                        <th>Titulo</th>
+                                        <th>Autor</th>
+                                        <th>Visitas</th>
+                                        <th>Favorito</th>
+                                        <th>Comentarios</th>
+                                        <th>Estado</th>
+                                        <th>Accion</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -131,13 +131,13 @@
                                             <td>{{ $post->comments_count }}</td>
                                             <td>
                                                 @if($post->status == true)
-                                                    <span class="label bg-green">Published</span>
+                                                    <span class="label bg-green">Publicado</span>
                                                 @else
-                                                    <span class="label bg-red">Pending</span>
+                                                    <span class="label bg-red">Pendiente</span>
                                                 @endif
                                             </td>
                                             <td>
-                                                <a class="btn btn-sm btn-primary waves-effect" target="_blank" href="{{ route('post.details',$post->slug) }}">View</a>
+                                                <a class="btn btn-sm btn-primary waves-effect" target="_blank" href="{{ route('post.details',$post->slug) }}">Ver</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -155,18 +155,18 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card">
                     <div class="header">
-                        <h2>TOP 10 ACTIVE AUTHOR</h2>
+                        <h2>TOP 10 AUTORES ACTIVOS</h2>
                     </div>
                     <div class="body">
                         <div class="table-responsive">
                             <table class="table table-hover dashboard-task-infos">
                                 <thead>
                                 <tr>
-                                    <th>Rank List</th>
-                                    <th>Name</th>
+                                    <th>Ranking</th>
+                                    <th>Nombre</th>
                                     <th>Posts</th>
-                                    <th>Comments</th>
-                                    <th>Favorite</th>
+                                    <th>Comentarios</th>
+                                    <th>Favorito</th>
                                 </tr>
                                 </thead>
                                 <tbody>

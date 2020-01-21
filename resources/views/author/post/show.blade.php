@@ -28,7 +28,7 @@
                         <div class="header">
                             <h2>
                               {{ $post->title }}
-                                <small>Posted By <strong> <a href="">{{ $post->user->name }}</a></strong> on {{ $post->created_at->toFormattedDateString() }}</small>
+                                <small>Publicado por:  <strong> <a href="">{{ $post->user->name }}</a></strong> on {{ $post->created_at->toFormattedDateString() }}</small>
                             </h2>
                         </div>
                         <div class="body">
@@ -40,7 +40,7 @@
                     <div class="card">
                         <div class="header bg-cyan">
                             <h2>
-                                Categoryies
+                                Categorias
                             </h2>
                         </div>
                         <div class="body">
@@ -69,6 +69,7 @@
                         </div>
                         <div class="body">
                             <img class="img-responsive thumbnail" src="{{ Storage::disk('public')->url('post/'.$post->image) }}" alt="">
+                            
                         </div>
                     </div>
 

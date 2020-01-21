@@ -20,7 +20,7 @@
                         <i class="material-icons">playlist_add_check</i>
                     </div>
                     <div class="content">
-                        <div class="text">TOTAL POSTS</div>
+                        <div class="text">Total Posts</div>
                         <div class="number count-to" data-from="0" data-to="{{ $posts->count() }}" data-speed="15" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -28,10 +28,10 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box bg-cyan hover-expand-effect">
                     <div class="icon">
-                        <i class="material-icons">favorite</i>
+                        <i class="material-icons">favoritos</i>
                     </div>
                     <div class="content">
-                        <div class="text">TOTAL FAVORITE</div>
+                        <div class="text">Total Favoritos</div>
                         <div class="number count-to" data-from="0" data-to="{{ Auth::user() ->favorite_posts()->count()}}" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <i class="material-icons">library_books</i>
                     </div>
                     <div class="content">
-                        <div class="text">PENDING POSTS</div>
+                        <div class="text">POSTS PENDIENTES</div>
                         <div class="number count-to" data-from="0" data-to="{{ $total_pending_posts }}" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <i class="material-icons">person_add</i>
                     </div>
                     <div class="content">
-                        <div class="text">TOTAL VIEWS</div>
+                        <div class="text">TOTAL Visitas</div>
                         <div class="number count-to" data-from="0" data-to="{{ $all_views }}" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -67,19 +67,19 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card">
                     <div class="header">
-                        <h2>TOP 5 POPULAR POSTS</h2>
+                        <h2>Post Populares - TOP 5</h2>
                     </div>
                     <div class="body">
                         <div class="table-responsive">
                             <table class="table table-hover dashboard-task-infos">
                                 <thead>
                                 <tr>
-                                    <th>Rank List</th>
-                                    <th>Title</th>
-                                    <th>Views</th>
-                                    <th>Favorite</th>
-                                    <th>Comments</th>
-                                    <th>Status</th>
+                                    <th>Ranking</th>
+                                    <th>Titulo</th>
+                                    <th>Vistas</th>
+                                    <th>Favoritos</th>
+                                    <th>Comentarios</th>
+                                    <th>Estado</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -92,9 +92,9 @@
                                             <td>{{ $post->comments_count }}</td>
                                             <td>
                                                 @if($post->status == true)
-                                                    <span class="label bg-green">Published</span>
+                                                    <span class="label bg-green">Publicado</span>
                                                 @else
-                                                    <span class="label bg-red">Pending</span>
+                                                    <span class="label bg-red">Pendientes</span>
                                                 @endif
                                             </td>
                                         </tr>

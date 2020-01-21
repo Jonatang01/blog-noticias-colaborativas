@@ -107,7 +107,7 @@
             
             </div><!-- row -->
 
-            <a class="load-more-btn" href="{{ route('post.index') }}"><b>LOAD MORE</b></a>
+            <a class="load-more-btn" href="{{ route('post.index') }}"><b>Ver Mas</b></a>
 
         </div><!-- container -->
     </section><!-- section -->

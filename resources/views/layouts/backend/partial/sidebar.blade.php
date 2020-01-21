@@ -20,7 +20,7 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            <i class="material-icons">input</i>Sign Out
+                            <i class="material-icons">input</i>Salir
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -35,7 +35,7 @@
     <!-- Menu -->
     <div class="menu">
         <ul class="list">
-            <li class="header">MAIN NAVIGATION</li>
+            <li class="header">Menu Navegacion</li>
 
             @if(Request::is('admin*'))
                 <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
@@ -53,7 +53,7 @@
                 <li class="{{ Request::is('admin/category*') ? 'active' : '' }}">
                     <a href="{{ route('admin.category.index') }}">
                         <i class="material-icons">apps</i>
-                        <span>Category</span>
+                        <span>Categorias</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/post*') ? 'active' : '' }}">
@@ -65,31 +65,31 @@
                 <li class="{{ Request::is('admin/pending/post') ? 'active' : '' }}">
                     <a href="{{ route('admin.post.pending') }}">
                         <i class="material-icons">library_books</i>
-                        <span>Pending Posts</span>
+                        <span>Posts Pendientes</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/favorite') ? 'active' : '' }}">
                     <a href="{{ route('admin.favorite.index') }}">
                         <i class="material-icons">favorite</i>
-                        <span>Favorite Posts</span>
+                        <span>Posts Favoritos</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/comments') ? 'active' : '' }}">
                     <a href="{{ route('admin.comment.index') }}">
                         <i class="material-icons">comment</i>
-                        <span>Comments</span>
+                        <span>Comentarios</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/authors') ? 'active' : '' }}">
                     <a href="{{ route('admin.author.index') }}">
                         <i class="material-icons">account_circle</i>
-                        <span>Authors</span>
+                        <span>Autores</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/subscriber') ? 'active' : '' }}">
                     <a href="{{ route('admin.subscriber.index') }}">
                         <i class="material-icons">subscriptions</i>
-                        <span>Subscribers</span>
+                        <span>Subscriptores</span>
                     </a>
                 </li>
                 <li class="header">System</li>
@@ -97,7 +97,7 @@
                 <li class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                     <a href="{{ route('admin.settings') }}">
                         <i class="material-icons">settings</i>
-                        <span>Settings</span>
+                        <span>Configuracion</span>
                     </a>
                 </li>
                 <li>
@@ -105,7 +105,7 @@
                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         <i class="material-icons">input</i>
-                        <span>Logout</span>
+                        <span>Salir</span>
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -129,22 +129,22 @@
                 <li class="{{ Request::is('author/favorite') ? 'active' : '' }}">
                     <a href="{{ route('author.favorite.index') }}">
                         <i class="material-icons">favorite</i>
-                        <span>Favorite Posts</span>
+                        <span>Post Favoritos</span>
                     </a>
                 </li>
 
                 <li class="{{ Request::is('author/comments') ? 'active' : '' }}">
                     <a href="{{ route('author.comment.index') }}">
                         <i class="material-icons">comment</i>
-                        <span>Comments</span>
+                        <span>Comentarios</span>
                     </a>
                 </li>
 
-                <li class="header">System</li>
+                <li class="header">Sistema</li>
                 <li class="{{ Request::is('author/settings') ? 'active' : '' }}">
                     <a href="{{ route('author.settings') }}">
                         <i class="material-icons">settings</i>
-                        <span>Settings</span>
+                        <span>Configuracion</span>
                     </a>
                 </li>
                 <li>
@@ -152,7 +152,7 @@
                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         <i class="material-icons">input</i>
-                        <span>Logout</span>
+                        <span>Salir</span>
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -165,7 +165,7 @@
     </div>
     <!-- #Menu -->
     <!-- Footer -->
-    <div class="legal">
+    <!--<div class="legal">
         <div class="copyright">
             &copy; 2017 - {{ date("Y") }} All rights reserved. <br>
             <strong> Developed &amp; <i class="far fa-heart"></i> by </strong>
@@ -174,6 +174,6 @@
         <div class="version">
             <b>Version: </b> 1.0.5
         </div>
-    </div>
+    </div>-->
     <!-- #Footer -->
 </aside>

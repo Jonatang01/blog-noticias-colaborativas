@@ -100,7 +100,7 @@
                     <div class="single-post info-area">
 
                         <div class="sidebar-area about-area">
-                            <h4 class="title"><b>ABOUT AUTHOR</b></h4>
+                            <h4 class="title"><b>Sobre el Autor</b></h4>
                             <p>{{ $post->user->about }}</p>
                         </div>
 
